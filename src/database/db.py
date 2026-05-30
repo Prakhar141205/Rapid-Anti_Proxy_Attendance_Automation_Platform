@@ -44,3 +44,14 @@ def teacher_login(username, password):
 
         if check_pass(password, teacher['password']):
             return teacher
+        
+def get_all_students():
+    response = supabase.table("students").select("*").execute()
+    return response.data
+
+def create_student(new_name, face_embedding=None, voice_embedding=None):
+    data = {'name': new_name, 'face_embedding':face_embedding, 'voice_embdding': voice_embedding}
+
+    response = supabase.table("students").insert(data).execute()
+
+    return response.data

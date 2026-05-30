@@ -12,3 +12,7 @@ pillow
 
 
 streamlit
+
+## voice pipeline
+librosa  ## to useful in editing the 
+resemblyzer  # make the embedding the audio edited files
