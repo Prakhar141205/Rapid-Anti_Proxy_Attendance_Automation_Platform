@@ -6,6 +6,7 @@ from src.screens.home_screen import home_screen
 
 from src.database.db import create_teacher, check_teacher_exists, teacher_login, get_teacher_subjects
 from src.components.dialog_create_subject import create_Subject_dialog
+from src.components.subject_card_component import subject_card
 
 def teacher_screen():
 
