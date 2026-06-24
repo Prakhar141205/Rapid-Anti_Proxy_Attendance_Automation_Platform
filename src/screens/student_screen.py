@@ -109,7 +109,7 @@ def student_screen():
         img = np.array(Image.open(img_source))
 
         with st.spinner("AI is scanning..."):
-            detected, all_ids, num_faces = predict_attendance()
+            detected, all_ids, num_faces = predict_attendance(img)
 
             if num_faces == 0:
                 st.error("No face found!")
@@ -133,7 +133,7 @@ def student_screen():
                 else :
                     st.info("Face not recognized! You might be a new Student")
 
-                    show_registration = True
+    show_registration = True
     if show_registration:
         with st.container(border=True):
             st.header("Register your profile here")

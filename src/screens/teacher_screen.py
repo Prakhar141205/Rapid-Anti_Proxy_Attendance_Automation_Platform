@@ -40,7 +40,7 @@ def teacher_dashboard():
     c1, c2 = st.columns(2, gap="xxlarge", vertical_alignment="center")
 
     with c1:
-        header_dashboard()er 
+        header_dashboard()
     with c2 :
         st.subheader(f"""Welcome {teacher_data['name']}""")
         if st.button("Logout", type="secondary", key="loginbackbutton", shortcut="control+backspace"):
@@ -212,7 +212,7 @@ def teacher_tab_manage_subjects():
 
         subject_card(
             name = sub['name'],
-            code = sub['subject_code']
+            code = sub['subject_code'],
             section = sub['section'],
             stats = stats,
             footer_callback = share_btn

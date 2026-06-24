@@ -7,12 +7,12 @@ from src.database.db import create_subject
 def create_Subject_dialog(teacher_id):
     st.write("Enter the details of the New subject")
 
-    sub_id = st.text_input("Enter the id of the subject." placeholder='CS101')
+    sub_id = st.text_input("Enter the id of the subject.", placeholder='CS101')
     sub_name = st.text_input("Enter the subject name", placeholder='Ex. English')
     sub_section = st.text_input("Enter the subject section", placeholder="Ex. A")
 
 
-    if st.button("Create subject now!", type='primary', width='stretch')
+    if st.button("Create subject now!", type='primary', width='stretch'):
 
         if sub_id and sub_name and sub_section:
             try:
